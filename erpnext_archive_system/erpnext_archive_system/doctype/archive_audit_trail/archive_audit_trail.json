@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:action",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "action",
+  "column_break_2",
+  "timestamp",
+  "section_break_4",
+  "document_id",
+  "category_id",
+  "column_break_7",
+  "version_number",
+  "user",
+  "section_break_10",
+  "ip_address",
+  "user_agent",
+  "column_break_13",
+  "session_id",
+  "request_id",
+  "section_break_16",
+  "details",
+  "section_break_18",
+  "severity",
+  "status",
+  "column_break_21",
+  "compliance_flag",
+  "retention_until"
+ ],
+ "fields": [
+  {
+   "fieldname": "action",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Entity Information"
+  },
+  {
+   "fieldname": "document_id",
+   "fieldtype": "Link",
+   "label": "Document ID",
+   "options": "Archive Document"
+  },
+  {
+   "fieldname": "category_id",
+   "fieldtype": "Link",
+   "label": "Category ID",
+   "options": "Archive Category"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "version_number",
+   "fieldtype": "Int",
+   "label": "Version Number"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Technical Details"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address"
+  },
+  {
+   "fieldname": "user_agent",
+   "fieldtype": "Text",
+   "label": "User Agent"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "session_id",
+   "fieldtype": "Data",
+   "label": "Session ID"
+  },
+  {
+   "fieldname": "request_id",
+   "fieldtype": "Data",
+   "label": "Request ID"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Long Text",
+   "label": "Details"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "severity",
+   "fieldtype": "Select",
+   "label": "Severity",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "default": "Low"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Success\nFailed\nWarning\nInfo",
+   "default": "Success"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "compliance_flag",
+   "fieldtype": "Check",
+   "label": "Compliance Flag"
+  },
+  {
+   "fieldname": "retention_until",
+   "fieldtype": "Date",
+   "label": "Retention Until"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "ERPNext Archive System",
+ "name": "Archive Audit Trail",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
