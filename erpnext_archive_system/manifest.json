@@ -1,0 +1,16 @@
+{
+  "app_name": "erpnext_archive_system",
+  "app_title": "ERPNext Archive System",
+  "app_publisher": "Your Company",
+  "app_description": "Comprehensive Archiving System for ERPNext with OCR and Versioning",
+  "app_icon": "octicon octicon-file-directory",
+  "app_color": "grey",
+  "app_email": "your-email@company.com",
+  "app_license": "MIT",
+  "app_version": "1.0.0",
+  "app_category": "Tools",
+  "app_dependencies": [
+    "frappe",
+    "erpnext"
+  ]
+}
