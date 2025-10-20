@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:category_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "Tree",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "category_name",
+  "column_break_2",
+  "parent_category",
+  "section_break_4",
+  "description",
+  "section_break_6",
+  "category_code",
+  "color",
+  "column_break_9",
+  "icon",
+  "is_active",
+  "section_break_12",
+  "retention_policy",
+  "access_restrictions",
+  "section_break_15",
+  "auto_categorization_rules",
+  "section_break_17",
+  "created_by",
+  "created_on",
+  "column_break_20",
+  "last_modified_by",
+  "last_modified_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "category_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Category Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "parent_category",
+   "fieldtype": "Link",
+   "label": "Parent Category",
+   "options": "Archive Category"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Display Settings"
+  },
+  {
+   "fieldname": "category_code",
+   "fieldtype": "Data",
+   "label": "Category Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Data",
+   "label": "Icon"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Policies"
+  },
+  {
+   "fieldname": "retention_policy",
+   "fieldtype": "Int",
+   "label": "Retention Policy (Years)"
+  },
+  {
+   "fieldname": "access_restrictions",
+   "fieldtype": "Small Text",
+   "label": "Access Restrictions"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Auto Categorization"
+  },
+  {
+   "fieldname": "auto_categorization_rules",
+   "fieldtype": "Table",
+   "label": "Auto Categorization Rules",
+   "options": "Archive Category Rule"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Audit Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_on",
+   "fieldtype": "Datetime",
+   "label": "Last Modified On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "ERPNext Archive System",
+ "name": "Archive Category",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,233 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:document_type_name",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type_name",
+  "column_break_2",
+  "document_type_code",
+  "section_break_4",
+  "description",
+  "section_break_6",
+  "allowed_file_types",
+  "max_file_size",
+  "column_break_9",
+  "requires_ocr",
+  "auto_categorize",
+  "section_break_12",
+  "retention_period",
+  "access_level",
+  "column_break_15",
+  "encryption_required",
+  "compliance_required",
+  "section_break_18",
+  "is_active",
+  "icon",
+  "section_break_21",
+  "created_by",
+  "created_on",
+  "column_break_24",
+  "last_modified_by",
+  "last_modified_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Type Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_type_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Type Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "File Requirements"
+  },
+  {
+   "fieldname": "allowed_file_types",
+   "fieldtype": "Small Text",
+   "label": "Allowed File Types",
+   "description": "Comma-separated list of allowed file extensions (e.g., pdf,doc,docx,jpg,png)"
+  },
+  {
+   "fieldname": "max_file_size",
+   "fieldtype": "Int",
+   "label": "Max File Size (MB)"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "requires_ocr",
+   "fieldtype": "Check",
+   "label": "Requires OCR",
+   "default": 0
+  },
+  {
+   "fieldname": "auto_categorize",
+   "fieldtype": "Check",
+   "label": "Auto Categorize",
+   "default": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Policies"
+  },
+  {
+   "fieldname": "retention_period",
+   "fieldtype": "Int",
+   "label": "Retention Period (Years)",
+   "default": 7
+  },
+  {
+   "fieldname": "access_level",
+   "fieldtype": "Select",
+   "label": "Default Access Level",
+   "options": "Public\nInternal\nConfidential\nRestricted",
+   "default": "Internal"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "encryption_required",
+   "fieldtype": "Check",
+   "label": "Encryption Required",
+   "default": 0
+  },
+  {
+   "fieldname": "compliance_required",
+   "fieldtype": "Check",
+   "label": "Compliance Required",
+   "default": 0
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Display Settings"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "default": 1
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Data",
+   "label": "Icon"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break",
+   "label": "Audit Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_on",
+   "fieldtype": "Datetime",
+   "label": "Last Modified On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "ERPNext Archive System",
+ "name": "Archive Document Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

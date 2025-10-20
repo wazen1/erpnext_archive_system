@@ -1,0 +1,203 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:version_number",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "version_number",
+  "column_break_2",
+  "version_date",
+  "section_break_4",
+  "version_notes",
+  "section_break_6",
+  "file_url",
+  "file_size",
+  "column_break_9",
+  "file_hash",
+  "encryption_status",
+  "section_break_12",
+  "created_by",
+  "created_on",
+  "column_break_15",
+  "last_modified_by",
+  "last_modified_on",
+  "section_break_18",
+  "change_summary",
+  "section_break_20",
+  "is_current_version",
+  "version_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "version_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Version Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "version_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Version Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Version Details"
+  },
+  {
+   "fieldname": "version_notes",
+   "fieldtype": "Text",
+   "label": "Version Notes"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "File Information"
+  },
+  {
+   "fieldname": "file_url",
+   "fieldtype": "Attach",
+   "label": "File URL"
+  },
+  {
+   "fieldname": "file_size",
+   "fieldtype": "Int",
+   "label": "File Size (bytes)"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "file_hash",
+   "fieldtype": "Data",
+   "label": "File Hash"
+  },
+  {
+   "fieldname": "encryption_status",
+   "fieldtype": "Select",
+   "label": "Encryption Status",
+   "options": "Not Encrypted\nEncrypted\nEncryption Failed"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Audit Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_on",
+   "fieldtype": "Datetime",
+   "label": "Last Modified On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Version Control"
+  },
+  {
+   "fieldname": "change_summary",
+   "fieldtype": "Text",
+   "label": "Change Summary"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Status"
+  },
+  {
+   "fieldname": "is_current_version",
+   "fieldtype": "Check",
+   "label": "Is Current Version",
+   "default": 0
+  },
+  {
+   "fieldname": "version_status",
+   "fieldtype": "Select",
+   "label": "Version Status",
+   "options": "Draft\nPublished\nArchived\nDeleted",
+   "default": "Published"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "ERPNext Archive System",
+ "name": "Archive Document Version",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

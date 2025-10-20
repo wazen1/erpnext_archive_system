@@ -1,0 +1,292 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:document_id",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "document_id",
+  "column_break_2",
+  "document_title",
+  "section_break_4",
+  "document_type",
+  "category",
+  "subcategory",
+  "column_break_8",
+  "status",
+  "priority",
+  "section_break_11",
+  "description",
+  "section_break_13",
+  "file_attachment",
+  "ocr_text",
+  "section_break_16",
+  "tags",
+  "metadata",
+  "section_break_19",
+  "access_level",
+  "retention_period",
+  "column_break_22",
+  "encryption_status",
+  "compliance_status",
+  "section_break_25",
+  "created_by",
+  "created_on",
+  "column_break_28",
+  "last_modified_by",
+  "last_modified_on",
+  "section_break_31",
+  "version_info",
+  "related_documents",
+  "section_break_34",
+  "audit_trail"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "document_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Document Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Classification"
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "label": "Document Type",
+   "options": "Archive Document Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Archive Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subcategory",
+   "fieldtype": "Link",
+   "label": "Subcategory",
+   "options": "Archive Subcategory"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nArchived\nDeleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Content"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Files"
+  },
+  {
+   "fieldname": "file_attachment",
+   "fieldtype": "Attach",
+   "label": "File Attachment"
+  },
+  {
+   "fieldname": "ocr_text",
+   "fieldtype": "Long Text",
+   "label": "OCR Extracted Text"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Small Text",
+   "label": "Tags"
+  },
+  {
+   "fieldname": "metadata",
+   "fieldtype": "JSON",
+   "label": "Metadata"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break",
+   "label": "Security & Compliance"
+  },
+  {
+   "fieldname": "access_level",
+   "fieldtype": "Select",
+   "label": "Access Level",
+   "options": "Public\nInternal\nConfidential\nRestricted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "retention_period",
+   "fieldtype": "Int",
+   "label": "Retention Period (Years)"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "encryption_status",
+   "fieldtype": "Select",
+   "label": "Encryption Status",
+   "options": "Not Encrypted\nEncrypted\nEncryption Failed"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "label": "Compliance Status",
+   "options": "Compliant\nNon-Compliant\nUnder Review"
+  },
+  {
+   "fieldname": "section_break_25",
+   "fieldtype": "Section Break",
+   "label": "Audit Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_on",
+   "fieldtype": "Datetime",
+   "label": "Last Modified On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "Version Management"
+  },
+  {
+   "fieldname": "version_info",
+   "fieldtype": "Table",
+   "label": "Version Info",
+   "options": "Archive Document Version"
+  },
+  {
+   "fieldname": "related_documents",
+   "fieldtype": "Table",
+   "label": "Related Documents",
+   "options": "Archive Related Document"
+  },
+  {
+   "fieldname": "section_break_34",
+   "fieldtype": "Section Break",
+   "label": "Audit Trail"
+  },
+  {
+   "fieldname": "audit_trail",
+   "fieldtype": "Table",
+   "label": "Audit Trail",
+   "options": "Archive Audit Trail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "ERPNext Archive System",
+ "name": "Archive Document",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Archive Viewer"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
