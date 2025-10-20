@@ -13,8 +13,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/erpnext_archive_system/css/erpnext_archive_system.css"
-# app_include_js = "/assets/erpnext_archive_system/js/erpnext_archive_system.js"
+app_include_css = "/assets/erpnext_archive_system/css/erpnext_archive_system.css"
+app_include_js = "/assets/erpnext_archive_system/js/erpnext_archive_system.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/erpnext_archive_system/css/erpnext_archive_system.css"
@@ -56,8 +56,8 @@ app_license = "MIT"
 # Installation
 # ------------
 
-# before_install = "erpnext_archive_system.install.before_install"
-# after_install = "erpnext_archive_system.install.after_install"
+before_install = "erpnext_archive_system.install.before_install"
+after_install = "erpnext_archive_system.install.after_install"
 
 # Uninstallation
 # ------------
