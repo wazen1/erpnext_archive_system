@@ -1,0 +1,9 @@
+{
+  "app_name": "erpnext_archive_system",
+  "main_js": {
+    "erpnext_archive_system": "erpnext_archive_system/public/js/erpnext_archive_system.js"
+  },
+  "main_css": {
+    "erpnext_archive_system": "erpnext_archive_system/public/css/erpnext_archive_system.css"
+  }
+}
