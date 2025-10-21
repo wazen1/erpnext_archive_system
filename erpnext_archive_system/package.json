@@ -1,0 +1,20 @@
+{
+  "name": "erpnext_archive_system",
+  "version": "1.0.0",
+  "description": "Comprehensive Archiving System for ERPNext with OCR and Versioning",
+  "main": "erpnext_archive_system/public/js/index.js",
+  "scripts": {
+    "build": "echo 'Build completed'",
+    "dev": "echo 'Development mode'"
+  },
+  "keywords": [
+    "erpnext",
+    "archive",
+    "document-management",
+    "ocr"
+  ],
+  "author": "Your Company",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

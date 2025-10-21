@@ -1,5 +1,47 @@
 {
   "app_name": "erpnext_archive_system",
-  "main_js": "erpnext_archive_system/public/js/erpnext_archive_system.js",
-  "main_css": "erpnext_archive_system/public/css/erpnext_archive_system.css"
+  "main_js": "erpnext_archive_system/public/js/erpnext_archive_system.bundle.js",
+  "main_css": "erpnext_archive_system/public/css/erpnext_archive_system.css",
+  "webpack": {
+    "js": [
+      {
+        "file": "erpnext_archive_system/public/js/erpnext_archive_system.bundle.js",
+        "name": "erpnext_archive_system"
+      },
+      {
+        "file": "erpnext_archive_system/public/js/erpnext_archive_system.js",
+        "name": "erpnext_archive_system_main"
+      },
+      {
+        "file": "erpnext_archive_system/public/js/archive_dashboard.js",
+        "name": "archive_dashboard"
+      },
+      {
+        "file": "erpnext_archive_system/public/js/archive_document.js",
+        "name": "archive_document"
+      }
+    ],
+    "css": [
+      {
+        "file": "erpnext_archive_system/public/css/erpnext_archive_system.css",
+        "name": "erpnext_archive_system"
+      },
+      {
+        "file": "erpnext_archive_system/public/css/archive_dashboard.css",
+        "name": "archive_dashboard"
+      }
+    ]
+  },
+  "esbuild": {
+    "entry_points": [
+      "erpnext_archive_system/public/js/erpnext_archive_system.bundle.js",
+      "erpnext_archive_system/public/js/erpnext_archive_system.js",
+      "erpnext_archive_system/public/js/archive_dashboard.js",
+      "erpnext_archive_system/public/js/archive_document.js"
+    ],
+    "css_files": [
+      "erpnext_archive_system/public/css/erpnext_archive_system.css",
+      "erpnext_archive_system/public/css/archive_dashboard.css"
+    ]
+  }
 }
