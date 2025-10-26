@@ -31,24 +31,24 @@ class ArchiveCategory(Document):
 	
 	def validate_parent_category(self):
 		"""Validate parent category selection"""
-		if self.parent_category:
-			if self.parent_category == self.name:
+		if self.parent:
+			if self.parent == self.name:
 				frappe.throw(_("Category cannot be its own parent"))
 			
 			# Check for circular reference
-			parent = frappe.get_doc("Archive Category", self.parent_category)
+			parent = frappe.get_doc("Archive Category", self.parent)
 			if self.is_child_of(parent.name):
 				frappe.throw(_("Circular reference detected in category hierarchy"))
 	
 	def is_child_of(self, parent_name):
 		"""Check if current category is child of given parent"""
-		if not self.parent_category:
+		if not self.parent:
 			return False
 		
-		if self.parent_category == parent_name:
+		if self.parent == parent_name:
 			return True
 		
-		parent = frappe.get_doc("Archive Category", self.parent_category)
+		parent = frappe.get_doc("Archive Category", self.parent)
 		return parent.is_child_of(parent_name)
 	
 	def set_default_values(self):
@@ -71,7 +71,7 @@ class ArchiveCategory(Document):
 	def validate_category_deletion(self):
 		"""Validate if category can be deleted"""
 		# Check if category has child categories
-		child_categories = frappe.get_all("Archive Category", filters={"parent_category": self.name})
+		child_categories = frappe.get_all("Archive Category", filters={"parent": self.name})
 		if child_categories:
 			frappe.throw(_("Cannot delete category with child categories. Please delete child categories first."))
 		
@@ -98,7 +98,7 @@ class ArchiveCategory(Document):
 	def get_child_categories(self):
 		"""Get all child categories"""
 		children = frappe.get_all("Archive Category", 
-			filters={"parent_category": self.name, "is_active": 1},
+			filters={"parent": self.name, "is_active": 1},
 			fields=["name", "category_name", "description", "color", "icon"]
 		)
 		return children
@@ -119,8 +119,8 @@ class ArchiveCategory(Document):
 				"category_name": current.category_name,
 				"category_code": current.category_code
 			})
-			if current.parent_category:
-				current = frappe.get_doc("Archive Category", current.parent_category)
+			if current.parent:
+				current = frappe.get_doc("Archive Category", current.parent)
 			else:
 				current = None
 		
